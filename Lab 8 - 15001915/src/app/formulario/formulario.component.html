@@ -1,0 +1,21 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>Formulario</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <form (ngSubmit)="submitForm()" class="flex flex-col gap-4">
+            <mat-form-field>
+                <mat-label>Nombre Mascota</mat-label>
+                <input matInput placeholder="Nombre" [(ngModel)]="nombre" name="nombre" required>
+            </mat-form-field>
+                <mat-label>Raza</mat-label>
+                <mat-radio-group matNativeControl aria-label="Select an option" [(ngModel)]="raza" name="raza" required>
+                    <mat-radio-button value="perro">Perro</mat-radio-button>
+                    <mat-radio-button value="gato">Gato</mat-radio-button>
+                    <mat-radio-button value="hamster">Hamster</mat-radio-button>
+                </mat-radio-group>
+
+            <button mat-raised-button color="primary" type="submit">Agregar Mascota</button>
+        </form>
+    </mat-card-content>
+</mat-card>
